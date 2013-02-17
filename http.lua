@@ -100,8 +100,8 @@ local function httprequest(self, url_parts, http_method, headers, body)
 	end
 	
 	local str = ""
-	while true do
-		line, err, partail = sock:receive(2048)
+	while true do2048
+		line, err, partail = sock:receive("*a")
 		if not line then
 			break
 		end
